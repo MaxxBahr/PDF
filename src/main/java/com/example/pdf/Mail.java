@@ -1,8 +1,11 @@
 package com.example.pdf;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+
 import javafx.stage.Stage;
 
 public class Mail extends Application {
@@ -15,8 +18,13 @@ public class Mail extends Application {
         stage.show();
     }
 
-    public static void main(String[] args){
-        launch(args);
+    @FXML
+    private TextArea textarea;
+
+    @FXML
+    private void speicherung(){
+        String text = textarea.getText();
+        System.out.println(text);
     }
 
 }
