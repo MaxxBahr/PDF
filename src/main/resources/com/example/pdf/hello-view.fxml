@@ -5,12 +5,46 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.pdf.MainWindowControls">
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.TextField?>
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.pdf.MainWindowControls" minHeight="400" minWidth="800">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <HBox alignment="TOP_LEFT">
+        <ImageView fitWidth="100" fitHeight="100">
+            <image>
+                <Image url="@example.png"></Image>
+            </image>
+        </ImageView>
+        <VBox alignment="TOP_RIGHT" spacing="5.0">
+            <ChoiceBox value="Terminart">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Prophylaxe"></String>
+                        <String fx:value="Profesionelle Zahnreinigung"></String>
+                        <String fx:value="Löcher stopfen"></String>
+                        <String fx:value="Zahnarzthelferin privat treffen"></String>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <TextField text="Patientenmail"></TextField>
+        </VBox>
+    </HBox>
+    <HBox>
+        <!-- PDF previews -->
+    </HBox>
+    <FlowPane alignment="BASELINE_RIGHT">
+        <Button text="Mail bearbeiten"></Button>
+        <Button text="senden"></Button>
+    </FlowPane>
+
 </VBox>
