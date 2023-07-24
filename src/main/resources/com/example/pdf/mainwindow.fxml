@@ -43,7 +43,7 @@
         <!-- PDF previews -->
     </HBox>
     <FlowPane alignment="BASELINE_RIGHT">
-        <Button text="Mail bearbeiten"></Button>
+        <Button text="Mail bearbeiten" onAction="#knopfDruecken"></Button>
         <Button text="senden"></Button>
     </FlowPane>
 
