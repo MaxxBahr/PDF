@@ -33,27 +33,28 @@ public class Mail extends Application {
 
     }
 
-    public void selection(){
+    public void selection() {
         LocalDate currentDate = LocalDate.now();
         int currentmonth = currentDate.getMonthValue();
         int currentDay = currentDate.getDayOfMonth();
         int currentYear = currentDate.getYear();
 
-        if(monthChoiceBox.getItems().get(0) == currentmonth && yearChoiceBox.getItems().get(0) == currentYear) {
-            for(int i = 0; i < currentDay; i++){
+        if (monthChoiceBox.getItems().get(0) == currentmonth && yearChoiceBox.getItems().get(0) == currentYear) {
+            for (int i = 0; i < currentDay; i++) {
                 dayChoiceBox.getItems().remove(i);
             }
-        }else{
+        } else {
             initialize();
         }
-        if(yearChoiceBox.getItems().get(0) == currentYear){
-            for(int k = 0; k < currentmonth; k++){
+        if (yearChoiceBox.getItems().get(0) == currentYear) {
+            for (int k = 0; k < currentmonth; k++) {
                 monthChoiceBox.getItems().remove(k);
             }
-        }else{
+        } else {
             initialize();
         }
     }
+
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(MainWindowLaunchGUI.class.getResource("mail.fxml"));
