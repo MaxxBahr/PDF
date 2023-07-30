@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Mail extends Application {
 
     @FXML
-    private ChoiceBox<Integer> dayChoiceBox, monthChoiceBox, yearChoiceBox;
+    private ChoiceBox<Integer> dayChoiceBox, monthChoiceBox, yearChoiceBox; // kdlaskdasd
     @FXML
     private TextArea textarea;
 
